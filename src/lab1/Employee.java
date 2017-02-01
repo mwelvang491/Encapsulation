@@ -22,6 +22,23 @@ public class Employee {
     String cubeId;
     Date orientationDate;
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        
+      if (firstName == "String" ){
+    // s is String
+    this.firstName = firstName;
+    }else{
+    // s is Integer value
+          System.out.println("Please Do Not Enter Numeric Values For First Name.");
+          
+    }
+        
+    }
+
 
 
 }
