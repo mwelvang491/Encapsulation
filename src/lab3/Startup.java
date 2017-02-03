@@ -9,8 +9,8 @@ package lab3;
  *
  * @author mitchell
  */
-public class EmployeeReportService {
-    public void produceOutput(String msg) {
-        System.out.println(msg);
+public class Startup {
+    public static void main(String[] args) {
+        
     }
 }
