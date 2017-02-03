@@ -27,7 +27,7 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-        
+      //not correct :(  
       if (firstName == "String" ){
     // s is String
     this.firstName = firstName;
