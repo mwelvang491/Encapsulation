@@ -62,14 +62,14 @@ public class Employee {
     // would only do this once, upon being hired.
     private void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
-       getFormattedDate();
+        System.out.println(firstName + " " + lastName + "met with HR on " +getFormattedDate() );
     }
 
     // Assume this must be performed second, and assume that an employee
     // would only do this once, upon being hired.:
     private void meetDepartmentStaff() {
         metDeptStaff = true;
-       getFormattedDate();
+       System.out.println(firstName + " " + lastName + "met with Department staff on " + getFormattedDate() );
     }
 
     // Assume this must be performed third. And assume that because department
@@ -77,7 +77,7 @@ public class Employee {
     // independently from other classes.
     public void reviewDeptPolicies() {
         reviewedDeptPolicies = true;
-       getFormattedDate();
+      System.out.println(firstName + " " + lastName + "reviewed Department Policies" + getFormattedDate() );
     }
 
     // Assume this must be performed 4th. And assume that because employees
@@ -86,7 +86,7 @@ public class Employee {
     public void moveIntoCubicle(String cubeId) {
         this.cubeId = cubeId;
         this.movedIn = true;
-        getFormattedDate();
+         System.out.println(firstName + " " + lastName + "moved to cubical " + cubeId + getFormattedDate() );
     }
 
     public String getFirstName() {
