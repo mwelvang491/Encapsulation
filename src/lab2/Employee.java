@@ -51,6 +51,7 @@ public class Employee {
         }else if (isNull(checkNulls)== false){
             System.out.println("Not Null");
         }
+        
     }
     
     public void formatDate(){
@@ -95,7 +96,6 @@ public class Employee {
     public String getFirstName() {
         return firstName;
     }
-
     // setter methods give the developer the power to control what data is
     // allowed through validation.
     
@@ -123,7 +123,6 @@ public class Employee {
     }
 
     public boolean isMetWithHr() {
-         
         return metWithHr;
     }
 
