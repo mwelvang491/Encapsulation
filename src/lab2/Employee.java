@@ -32,9 +32,9 @@ public class Employee {
     private Date orientationDate;
 
     public Employee(String firstName, String lastName, String ssn) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.ssn = ssn;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setSsn(ssn);
     }
     
     public void processNewEmployee(String cubeId){
@@ -44,34 +44,32 @@ public class Employee {
         this.moveIntoCubicle(cubeId);
     }   
     
-    public void checkNulls(Object checkNulls){
+    public void validateNull(Object checkNull){
         //this may need to be edited to break operations if null. 
-        if( isNull(checkNulls) == true ){
+        if( isNull(checkNull) == true ){
             System.out.println("The value is Null");
-        }else if (isNull(checkNulls)== false){
+        }else if (isNull(checkNull)== false){
             System.out.println("Not Null");
         }
-        
     }
     
-    public void formatDate(){
+    public String getFormattedDate(){
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-        String fmtDate = sdf.format(orientationDate);        
-        System.out.println(firstName + " " + lastName + " met with Hr on " + fmtDate);
+        return sdf.format(orientationDate); 
     }
     
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
     private void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
-        formatDate();
+       getFormattedDate();
     }
 
     // Assume this must be performed second, and assume that an employee
     // would only do this once, upon being hired.:
     private void meetDepartmentStaff() {
         metDeptStaff = true;
-       formatDate();
+       getFormattedDate();
     }
 
     // Assume this must be performed third. And assume that because department
@@ -79,7 +77,7 @@ public class Employee {
     // independently from other classes.
     public void reviewDeptPolicies() {
         reviewedDeptPolicies = true;
-        formatDate();
+       getFormattedDate();
     }
 
     // Assume this must be performed 4th. And assume that because employees
@@ -88,11 +86,9 @@ public class Employee {
     public void moveIntoCubicle(String cubeId) {
         this.cubeId = cubeId;
         this.movedIn = true;
-        formatDate();
+        getFormattedDate();
     }
 
-   
-        
     public String getFirstName() {
         return firstName;
     }
@@ -100,7 +96,7 @@ public class Employee {
     // allowed through validation.
     
     public void setFirstName(String firstName) {
-       checkNulls(firstName);
+       validateNull(firstName);
        this.firstName = firstName;
     }
 
@@ -109,7 +105,7 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
-         checkNulls(lastName);
+         validateNull(lastName);
        this.lastName = lastName;
     }
 
@@ -118,7 +114,7 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
-         checkNulls(ssn);
+        validateNull(ssn);
         this.ssn = ssn;
     }
 
@@ -161,7 +157,7 @@ public class Employee {
 
     
     public void setCubeId(String cubeId) {
-        checkNulls(cubeId);
+        validateNull(cubeId);
         this.cubeId = cubeId;
     }
 
@@ -170,6 +166,6 @@ public class Employee {
     }
 
     public void setOrientationDate(Date orientationDate) {
-        checkNulls(orientationDate);
+        validateNull(orientationDate);
         this.orientationDate = orientationDate;
     }}

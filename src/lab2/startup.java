@@ -15,12 +15,7 @@ import java.util.Set;
  * @author mitchell
  */
 public class startup {
-    public static void main(String[] args) {
-     Employee emp = new Employee("Mitch", "Welvang", "222-222-2222");
-   //Will Not Process new Employees
-       emp.processNewEmployee("223");
-       Date x = null;
-      
+    public static void main(String[] args) {  
         
     }
 }
