@@ -10,5 +10,26 @@ package lab4;
  * @author mitchell
  */
 public class Business {
+    private HrDepartment hr;
+    
+    public  Business() {
+        hr = new HrDepartment();
+    }
+    
+    public void hireEmployee(String firstName, String lastName, String ssn) {
+        hr.hireEmployee(firstName, lastName, ssn);
+        hr.outputReport(ssn);
+    }
+
+    public HrDepartment getHr() {
+        return hr;
+    }
+
+    public void setHr(HrDepartment hr) {
+        this.hr = hr;
+    }
+
+    
+    
     
 }
