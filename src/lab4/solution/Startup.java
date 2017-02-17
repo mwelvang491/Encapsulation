@@ -20,7 +20,6 @@ package lab4.solution;
 public class Startup {
     public static void main(String[] args) {
         Company company = new Company();
-        
         // Startup delegates work to Company which then delegates work to HRManager
         company.hireEmployee("John", "Doe", "444-44-4444");
         

@@ -18,7 +18,7 @@ public class HrManager {
         employees = new ArrayList();
     }
     
-    public void hireEmployee(String firstName, String lastName, String ssn) {
+    public void hireEmployee(String firstName, String lastName, String ssn){
         Employee e = new Employee(firstName,lastName,ssn);
         e.setFirstName(firstName);
         e.setLastName(lastName);
@@ -47,8 +47,7 @@ public class HrManager {
         }
 
         // if found run report
-        if(e.isMetWithHr() && e.isMetDeptStaff()
-           && e.isReviewedDeptPolicies() && e.isMovedIn()) {
+        if(e.isMetWithHr() && e.isMetDeptStaff() && e.isReviewedDeptPolicies() && e.isMovedIn()) {
             
             e.getReportService().outputReport();
             
